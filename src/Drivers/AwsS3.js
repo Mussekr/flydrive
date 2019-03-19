@@ -180,7 +180,7 @@ class AwsS3 {
   async get (location, encoding = 'utf-8', params = {}) {
     const { Body } = await this.getObject(location, params)
 
-    return Buffer.isBuffer(Body) ? Body.toString(encoding) : Body
+    return Body;
   }
 
   /**
